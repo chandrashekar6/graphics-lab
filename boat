@@ -1,0 +1,100 @@
+#include <graphics.h> 
+#include <stdio.h> 
+  
+// Function to draw moving car 
+void boat(int x,int y)
+{
+line(x-50,y,x+50,y);
+line(x-50,y,x-70,y-40);
+line(x-70,y-40,x+70,y-40);
+line(x+70,y-40,x+50,y);
+
+
+}
+
+
+
+void draw_ball(void) { 
+  
+    int i, j = 0, gd = DETECT, gm; 
+  
+   int y=200;
+    initgraph(&gd, &gm, ""); 
+setcolor(BLUE);   
+line(0,200,450,200);
+setcolor(RED);
+for(i=100;i<400;i=i+50)
+{
+setcolor(BLUE);   
+line(0,200,450,200);
+setcolor(RED);
+
+boat(i,200);
+delay(1000);
+cleardevice();
+
+}
+
+
+
+
+
+/*
+while(k<500)
+{
+
+circle(150,150,k);
+
+delay(10000);
+
+
+k++;
+cleardevice();
+
+}
+*/
+
+/*
+while(1)
+{
+	//skleton
+	circle(100,100,30);
+        line(100,100,100,300);
+	
+	//hands
+        line(100,200,50,150);
+	line(100,200,150,150);
+	//legs
+	line(100,250,50,300);
+	line(100,250,150,300);
+
+	delay(100);
+	cleardevice();
+
+	
+//skleton
+	circle(100,100,30);
+        line(100,100,100,300);
+	
+	//hands
+        line(100,200,50,120);
+	line(100,200,150,120);
+	//legs
+	line(100,250,50,300);
+	line(100,250,150,300);
+
+	delay(100);
+	cleardevice();
+
+}
+*/
+    closegraph(); 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    draw_ball(); 
+  
+    return 0; 
+} 
